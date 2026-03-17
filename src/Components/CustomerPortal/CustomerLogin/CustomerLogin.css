@@ -1,5 +1,3 @@
-/* ===== MAIN WRAPPER ===== */
-
 .CustomerLogin {
     min-height: 100vh;
     display: flex;
@@ -8,8 +6,6 @@
     background: linear-gradient(135deg, #fff7f1, #ffffff);
     padding: 20px;
 }
-
-/* ===== CONTENT BOX ===== */
 
 .CustomerLogin-content {
     display: flex;
@@ -23,8 +19,6 @@
     border-radius: 14px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
-
-/* ===== LEFT SIDE ===== */
 
 .CustomerLogin-text-form {
     flex: 1;
@@ -45,15 +39,11 @@
     color: #666;
 }
 
-/* ===== FORM ===== */
-
 .CustomerLogin-text-form form {
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
-
-/* ===== INPUT ===== */
 
 .CustomerLogin-text-form form input {
     padding: 12px 14px;
@@ -65,11 +55,9 @@
 
 .CustomerLogin-text-form form input:focus {
     outline: none;
-    border-color: #1f64fc;
+    border-color: #0182db;
     box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
 }
-
-/* ===== PASSWORD FIELD ===== */
 
 .input-field1 {
     position: relative;
@@ -83,14 +71,12 @@
     cursor: pointer;
     font-size: 20px;
     color: #fff;
-    background-color: #1f64fc !important;
+    background-color: #0182db !important;
 }
-
-/* ===== BUTTON ===== */
 
 .login-button {
     padding: 12px;
-    background-color: #1f64fc !important;
+    background-color: #0182db !important;
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -100,10 +86,8 @@
 }
 
 .login-button:hover {
-    background: #1f65fcbd !important;
+    background: #046cb1 !important;
 }
-
-/* ===== SIGNUP TEXT ===== */
 
 .CustomerLogin-text-form form p {
     text-align: center;
@@ -111,12 +95,10 @@
 }
 
 .CustomerLogin-text-form form span {
-    color: #1f64fc;
+    color: #0182db;
     cursor: pointer;
     font-weight: 500;
 }
-
-/* ===== RIGHT IMAGE ===== */
 
 .CustomerLogin-img {
     flex: 1;
@@ -129,8 +111,6 @@
     max-width: 380px;
 }
 
-/* ===== TABLET ===== */
-
 @media (max-width: 992px) {
     .CustomerLogin-content {
         flex-direction: column;
@@ -142,8 +122,6 @@
         max-width: 300px;
     }
 }
-
-/* ===== MOBILE ===== */
 
 @media (max-width: 600px) {
     .CustomerLogin-content {

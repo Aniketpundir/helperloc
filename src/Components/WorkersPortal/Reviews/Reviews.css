@@ -58,7 +58,7 @@
 
 .bar-fill {
     height: 100%;
-    background: #ec6d13;
+    background: #0182db;
 }
 
 .reviews-section {
@@ -89,7 +89,7 @@
 .review-rating {
     font-weight: bold;
     margin: 8px 0;
-    color: #ec6d13;
+    color: #0182db;
 }
 
 .review-actions {

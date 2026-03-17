@@ -77,7 +77,7 @@
 }
 
 .past-booking-rebooking button {
-    background: #ec6d13;
+    background: #0182db;
     color: #fff;
     border: none;
     padding: 8px 14px;
@@ -92,7 +92,7 @@
 }
 
 .past-booking-rebooking button:hover {
-    background: #ec6d13ca;
+    background: #046cb1;
 }
 
 

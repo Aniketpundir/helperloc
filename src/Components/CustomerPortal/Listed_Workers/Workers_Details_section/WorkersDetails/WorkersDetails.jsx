@@ -17,8 +17,6 @@ const WorkersDetails = () => {
 
     const token = localStorage.getItem("customerToken");
 
-    /* ✅ SINGLE FETCH ONLY */
-
     useEffect(() => {
         if (id && token) {
             dispatch(fetchSingleWorker({ id, token }));

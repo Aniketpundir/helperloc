@@ -1,6 +1,5 @@
-// WhyChooseUs.jsx
 import React from 'react';
-import cleaningImg from '../../../../assets/cleaning.jpg'; // apni image ka path yahan lagao
+import cleaningImg from '../../../../assets/cleaning.jpg';
 import { MdOutlineVerified, MdOutlineSupportAgent } from 'react-icons/md';
 import { BsClockHistory, BsWallet2 } from 'react-icons/bs';
 import { AiOutlineStar } from 'react-icons/ai';
@@ -55,7 +54,6 @@ const features = [
 const WhyChooseUs = () => {
     return (
         <section className="why-section">
-            {/* Left Side */}
             <div className="why-left">
                 <h2 className="why-heading">Why choose HelperLoc?</h2>
                 <p className="why-subtext">
@@ -84,7 +82,6 @@ const WhyChooseUs = () => {
                 </div>
             </div>
 
-            {/* Right Side - Image */}
             <div className="why-right">
                 <img src={cleaningImg} alt="Professional cleaner" className="why-image" />
             </div>

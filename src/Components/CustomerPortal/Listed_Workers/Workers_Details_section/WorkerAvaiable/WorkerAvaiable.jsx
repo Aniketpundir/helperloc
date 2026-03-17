@@ -3,14 +3,8 @@ import "./WorkerAvaiable.css";
 import { useSelector } from "react-redux";
 
 const WorkerAvaiable = () => {
-
-    /* ================= REDUX DATA ================= */
-
     const { workerDetails } = useSelector((s) => s.workers);
-
     const [bookingDate, setBookingDate] = useState("");
-
-    /* ================= DATE LOGIC ================= */
 
     const today = new Date();
     const tomorrow = new Date();
@@ -26,20 +20,13 @@ const WorkerAvaiable = () => {
         return `${y}-${m}-${d}`;
     };
 
-    /* ================= BOOKED DATES ================= */
-
     const bookedDates =
         workerDetails?.scheduledDate?.map((d) =>
             new Date(d).toLocaleDateString("en-CA")
         ) || [];
 
     const isBooked = (date) => bookedDates.includes(formatDate(date));
-
-    /* ================= SAFE ================= */
-
     if (!workerDetails) return null;
-
-    /* ================= UI ================= */
 
     return (
         <div data-aos="fade-up" className="Availablity">

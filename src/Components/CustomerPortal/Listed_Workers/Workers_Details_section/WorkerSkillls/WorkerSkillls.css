@@ -25,8 +25,8 @@
 }
 
 .skill-badge {
-    background-color: #ec6d1331;
-    color: #ec6d13;
+    background-color: #046cb1;
+    color: #0182db;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 14px;
@@ -36,7 +36,7 @@
 }
 
 .skill-badge:hover {
-    background-color: #ec6d13;
+    background-color: #0182db;
     color: white;
 }
 

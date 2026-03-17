@@ -2,7 +2,6 @@ import React from "react";
 import "./Reviews.css";
 
 const Reviews = () => {
-    // Ratings data (raw counts, not percentages)
     const ratingData = {
         average: 4.7,
         totalReviews: 125,
@@ -14,13 +13,10 @@ const Reviews = () => {
             1: 6,
         },
     };
-
-    // Function to calculate percentage
     const calculatePercent = (count) => {
         return ((count / ratingData.totalReviews) * 100).toFixed(1);
     };
 
-    // Example reviews
     const reviews = [
         {
             id: 1,
@@ -107,16 +103,11 @@ const Reviews = () => {
     return (
         <div className="ratings-container">
             <h2>Ratings & Reviews</h2>
-
-            {/* Rating Summary */}
             <div className="rating-summary">
-                {/* Average Rating Box */}
                 <div className="rating-box">
                     <h1>{ratingData.average}</h1>
                     <p>Based on {ratingData.totalReviews} reviews</p>
                 </div>
-
-                {/* Breakdown */}
                 <div className="rating-breakdown">
                     {Object.entries(ratingData.breakdown).map(([stars, count]) => {
                         const percent = calculatePercent(count);
@@ -136,7 +127,6 @@ const Reviews = () => {
                 </div>
             </div>
 
-            {/* Reviews */}
             <div className="reviews-section">
                 <h3>All Reviews</h3>
                 {reviews.map((r) => (

@@ -15,27 +15,18 @@ const ListedWorkers = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    /* ================= REDUX ================= */
-
     const { workers, loading } = useSelector((s) => s.workers);
     const { district, pinCode, state } = useSelector((s) => s.location);
-
-    /* ================= FETCH ================= */
 
     useEffect(() => {
         dispatch(fetchWorkersList(title));
         dispatch(fetchLocation());
     }, [title, dispatch]);
 
-    /* ================= UI ================= */
-
     return (
         <div className="ListedWorker">
 
             <h3>To confirm your location, check the surrounding area on the map.</h3>
-
-            {/* LOCATION */}
-
             <div className="location">
                 <div className="location-text">
                     <p>State:-- <span>[ {state} ]</span></p>
@@ -46,14 +37,10 @@ const ListedWorkers = () => {
                 <LocationMap />
             </div>
 
-            {/* HEADING */}
-
             <div className="ListedWorker-text">
                 <h1>Find a Worker</h1>
                 <p>Browse our network of trusted professionals.</p>
             </div>
-
-            {/* FILTER */}
 
             <div className="ListedWorker-filter">
                 <select
@@ -76,8 +63,6 @@ const ListedWorkers = () => {
                     <FaCaretDown className="caret-icon" />
                 )}
             </div>
-
-            {/* WORKERS */}
 
             <div className="ListedWorker-card">
 

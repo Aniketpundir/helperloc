@@ -9,7 +9,6 @@
     overflow: hidden;
 }
 
-/* Header */
 .job-list-header {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1fr;
@@ -24,7 +23,6 @@
     font-size: 0.85rem;
 }
 
-/* Rows */
 .job-list-row {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1fr;
@@ -43,7 +41,6 @@
     font-size: 0.95rem;
 }
 
-/* Job Info */
 .job-title {
     font-weight: 600;
     margin-bottom: 3px;
@@ -55,7 +52,6 @@
     color: #888;
 }
 
-/* Filter Row */
 .filter-row {
     display: flex;
     align-items: center;
@@ -73,7 +69,6 @@
     font-size: 0.9rem;
 }
 
-/* Status Pills */
 .status-pill {
     display: inline-block;
     padding: 5px 10px;
@@ -90,7 +85,7 @@
 
 .status-pending {
     background-color: #fff8e1;
-    color: #f6ad55;
+    color: #046cb1;
 }
 
 .status-cancelled {

@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react'
 import "./JobDashboard.css";
-import { GiConsoleController } from 'react-icons/gi';
-import { Store } from 'lucide-react';
 import { StoreContext } from '../../../Context/StoreContext';
 import axios from 'axios';
 

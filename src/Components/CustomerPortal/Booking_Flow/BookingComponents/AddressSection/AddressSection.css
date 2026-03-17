@@ -1,27 +1,19 @@
-/* ================= CONTAINER ================= */
-
 .saved-address-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border: 1px solid #e5e7eb;
     padding: 14px 16px;
     border-radius: 10px;
     margin-bottom: 12px;
-
     background: #fff;
     transition: all 0.25s ease;
 }
 
-/* Hover Effect */
-
 .saved-address-box:hover {
-    border-color: #ec6d13;
+    border-color: #046cb1;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
-
-/* ================= LABEL ================= */
 
 .saved-address-box label {
     display: flex;
@@ -30,15 +22,11 @@
     width: 100%;
 }
 
-/* Radio */
-
 .saved-address-box input[type="radio"] {
     margin-top: 5px;
-    accent-color: #ec6d13;
+    accent-color: #0182db;
     cursor: pointer;
 }
-
-/* Text */
 
 .saved-address-box p {
     margin: 2px 0;
@@ -51,19 +39,15 @@
     color: #111827;
 }
 
-/* ================= BUTTON ROW ================= */
-
 .row {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-/* Edit + Delete Button */
-
 .edit-address {
     border: none;
-    background: #ec6d13;
+    background: #0182db;
     padding: 7px;
     border-radius: 6px;
     cursor: pointer;
@@ -73,10 +57,8 @@
     justify-content: center;
 }
 
-/* Hover */
-
 .edit-address:hover {
-    background: #d75f0f;
+    background: #046cb1;
     transform: scale(1.05);
 }
 
@@ -85,39 +67,27 @@
     color: #fff;
 }
 
-/* ================= ADD BUTTON ================= */
-
 .pay-btn {
     width: 100%;
     padding: 12px;
-
-    background: #ec6d13;
+    background: #0182db;
     color: white;
-
     font-size: 14px;
     font-weight: 600;
-
     border: none;
     border-radius: 8px;
-
     cursor: pointer;
     transition: 0.25s ease;
 }
 
-/* Hover */
-
 .pay-btn:hover {
-    background: #d75f0f;
+    background: #046cb1;
 }
-
-/* Disabled */
 
 .pay-btn:disabled {
     background: #9ca3af;
     cursor: not-allowed;
 }
-
-/* Cancel */
 
 .cancel-btn {
     background: #9ca3af;
@@ -127,16 +97,12 @@
     background: #6b7280;
 }
 
-/* ================= FORM ================= */
-
 .form-section {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 10px;
 }
-
-/* Input */
 
 .form-section input {
     padding: 10px 12px;
@@ -147,14 +113,10 @@
     transition: 0.2s ease;
 }
 
-/* Focus */
-
 .form-section input:focus {
-    border-color: #ec6d13;
+    border-color: #0182db;
     box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
 }
-
-/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
 

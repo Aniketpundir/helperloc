@@ -24,11 +24,11 @@
 .Top-service .more-service {
     margin: 40px 44%;
     padding: 10px;
-    background-color: #1f64fc;
+    background-color: #0182db;
     border: none;
     border-radius: 20px;
     color: #fff;
-    box-shadow: 0.5px 10px 20px 0.5px #1f64fc;
+    box-shadow: 0.5px 10px 20px 0.5px #0182db;
     cursor: pointer;
 }
 

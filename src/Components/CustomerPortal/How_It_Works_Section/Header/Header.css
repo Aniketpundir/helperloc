@@ -10,7 +10,7 @@
 
 .how-header button {
     padding: 8px 20px;
-    background-color: #1f64fc;
+    background-color: #0182db;
     border: none;
     border-radius: 6px;
     color: #fff;
@@ -35,10 +35,10 @@
 
     .how-header button {
         padding: 8px 20px;
-        background-color: #ec6d133c;
+        background-color: #046cb1;
         border: none;
         border-radius: 6px;
-        color: #ec6d13;
+        color: #0182db;
     }
 
     .how-header p {

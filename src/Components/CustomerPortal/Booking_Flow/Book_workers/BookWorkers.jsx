@@ -5,7 +5,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 
-/* REDUX */
 import {
     fetchAddresses,
     addAddress,
@@ -17,7 +16,6 @@ import {
 import { fetchWorkerDetails } from "../../../../redux/slices/workerSlice";
 import { fetchLocation } from "../../../../redux/slices/locationSlice";
 
-/* COMPONENT */
 import AddressSection from "../BookingComponents/AddressSection/AddressSection";
 
 const BookWorkers = () => {
@@ -25,16 +23,12 @@ const BookWorkers = () => {
     const Navigate = useNavigate();
     const { title, id } = useParams();
 
-    /* ================= REDUX STATE ================= */
-
     const { customerToken } = useSelector((s) => s.auth);
     const { addresses, loading, selectedAddress } = useSelector(
         (s) => s.address
     );
     const { workerDetails } = useSelector((s) => s.worker);
     const { district, state, pinCode } = useSelector((s) => s.location);
-
-    /* ================= STATES ================= */
 
     const [paymentMethod, setPaymentMethod] = useState("");
     const [showForm, setShowForm] = useState(false);
@@ -51,8 +45,6 @@ const BookWorkers = () => {
         state: "",
     });
 
-    /* ================= FETCH ================= */
-
     useEffect(() => {
         if (!customerToken) return;
 
@@ -60,8 +52,6 @@ const BookWorkers = () => {
         dispatch(fetchWorkerDetails({ token: customerToken, id }));
         dispatch(fetchLocation());
     }, [customerToken, id, dispatch]);
-
-    /* ================= AUTO FILL ================= */
 
     useEffect(() => {
         setNewAddress((prev) => ({
@@ -72,8 +62,6 @@ const BookWorkers = () => {
         }));
     }, [district, state, pinCode]);
 
-    /* ================= INPUT ================= */
-
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -82,8 +70,6 @@ const BookWorkers = () => {
             [name]: value,
         }));
     };
-
-    /* ================= ADD / UPDATE ================= */
 
     const handleAddAddress = async (e) => {
         e.preventDefault();
@@ -116,8 +102,6 @@ const BookWorkers = () => {
         });
     };
 
-    /* ================= EDIT ================= */
-
     const handleEdit = (addr) => {
         setNewAddress(addr);
         setEditMode(true);
@@ -125,14 +109,10 @@ const BookWorkers = () => {
         setShowForm(true);
     };
 
-    /* ================= DELETE ================= */
-
     const handleDelete = async (id) => {
         await dispatch(deleteAddress({ token: customerToken, id }));
         toast.error("Address Deleted");
     };
-
-    /* ================= BOOKING ================= */
 
     const handleBooking = async () => {
         if (!selectedAddress) return alert("Please select address!");
@@ -163,8 +143,6 @@ const BookWorkers = () => {
         }
     };
 
-    /* ================= DATE ================= */
-
     const today = new Date();
     const tomorrow = new Date();
     const dayAfterTomorrow = new Date();
@@ -181,13 +159,10 @@ const BookWorkers = () => {
 
     const isBooked = (date) => bookedDates.includes(formatDate(date));
 
-    /* ================= UI ================= */
-
     return (
         <div className="checkout-container">
             <div className="checkout-box">
 
-                {/* WORKER */}
                 <div className="worker-profiles">
                     <img
                         src={workerDetails?.worker?.workerId?.avatar?.image}
@@ -204,7 +179,6 @@ const BookWorkers = () => {
                     </div>
                 </div>
 
-                {/* DATE */}
                 <h2>When would you like your service?</h2>
 
                 <div className="button-group">
@@ -223,8 +197,6 @@ const BookWorkers = () => {
                     ))}
                 </div>
 
-                {/* ADDRESS */}
-
                 <AddressSection
                     addresses={addresses}
                     loadingAddr={loading}
@@ -239,8 +211,6 @@ const BookWorkers = () => {
                     handleAddAddress={handleAddAddress}
                     editMode={editMode}
                 />
-
-                {/* PAYMENT */}
 
                 <h2>Payment Details</h2>
 

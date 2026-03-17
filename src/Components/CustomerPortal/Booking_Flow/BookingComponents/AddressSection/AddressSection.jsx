@@ -31,8 +31,6 @@ const AddressSection = ({
             {!showForm ? (
                 <>
 
-                    {/* ===== ADDRESS LIST ===== */}
-
                     {addresses.length === 0 && <p>No address added</p>}
 
                     {addresses.map((addr) => (
@@ -65,8 +63,6 @@ const AddressSection = ({
                         </div>
                     ))}
 
-                    {/* ===== ADD BUTTON ===== */}
-
                     <button
                         className="pay-btn"
                         disabled={addresses.length >= 3}
@@ -77,8 +73,6 @@ const AddressSection = ({
 
                 </>
             ) : (
-
-                /* ===== FORM ===== */
 
                 <form className="form-section" onSubmit={handleAddAddress}>
 
@@ -129,8 +123,6 @@ const AddressSection = ({
                         onChange={handleChange}
                         required
                     />
-
-                    {/* ===== BUTTONS ===== */}
 
                     <div className="row">
 

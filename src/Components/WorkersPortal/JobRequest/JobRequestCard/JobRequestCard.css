@@ -88,7 +88,6 @@
 .accept-button {
     padding: 8px 18px;
     border-radius: 20px;
-    /* Pill-shaped buttons */
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;

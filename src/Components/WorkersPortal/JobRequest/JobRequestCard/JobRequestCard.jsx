@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react';
-import './JobRequestCard.css'; // Make sure to create this CSS file
+import React, { useContext } from 'react';
+import './JobRequestCard.css';
 import { StoreContext } from '../../../../Context/StoreContext';
 import axios from 'axios';
-import { header } from 'framer-motion/m';
 
 const JobRequestCard = ({ job }) => {
     const { URL_LINK, workerToken } = useContext(StoreContext);
@@ -13,7 +12,6 @@ const JobRequestCard = ({ job }) => {
 
         try {
             const res = await axios.patch(newUrl, {
-                // koi body nahi bhejna
             }, {
                 headers: { token: workerToken },
                 params: { q: status }

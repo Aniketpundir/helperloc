@@ -6,13 +6,10 @@ const WorkerSkillls = () => {
 
     const { workerDetails, loading } = useSelector((s) => s.workers);
 
-    /* ================= STATES ================= */
-
     if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
 
     if (!workerDetails) return null;
 
-    // Ensure it's always an array
     const skills = workerDetails?.worker?.skills || [];
 
     return (
@@ -26,7 +23,7 @@ const WorkerSkillls = () => {
                         </span>
                     ))
                 ) : (
-                    <p className="no-skills">No skills available</p> // optional fallback
+                    <p className="no-skills">No skills available</p>
                 )}
             </div>
         </div>

@@ -49,13 +49,13 @@
 
 .confirm-button {
     padding: 10px 60px;
-    background-color: #ec6d13;
+    background-color: #0182db;
     color: #fff;
     font-size: 18px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    box-shadow: 0.5px 10px 20px 0.5px #ec6d13a3;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
 }
 
 @media (max-width:650px) {

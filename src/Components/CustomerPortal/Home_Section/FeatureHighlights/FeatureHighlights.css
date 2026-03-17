@@ -3,7 +3,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* ---------- Header ---------- */
 .fh-header {
     text-align: center;
     margin-bottom: 50px;
@@ -23,14 +22,12 @@
     font-weight: 400;
 }
 
-/* ---------- Cards Grid ---------- */
 .fh-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
-/* ---------- Single Card ---------- */
 .fh-card {
     background: #ffffff;
     border-radius: 20px;
@@ -46,10 +43,8 @@
 
 .fh-card:hover {
     box-shadow: 0 8px 28px rgba(34, 197, 94, 0.25);
-    /* ✅ green shadow darker */
     transform: translateY(-4px);
     border-color: #22c55e;
-    /* ✅ green border on hover */
 }
 
 .fh-icon-wrapper {
@@ -62,17 +57,14 @@
     justify-content: center;
     flex-shrink: 0;
     transition: background-color 0.25s ease;
-    /* ✅ smooth icon bg transition */
 }
 
 .fh-card:hover .fh-icon-wrapper {
     background-color: #22c55e;
-    /* ✅ icon bg green on hover */
 }
 
 .fh-card:hover .fh-icon-wrapper svg {
     color: #ffffff !important;
-    /* ✅ icon white on hover */
 }
 
 .fh-card-title {
@@ -91,7 +83,6 @@
     font-weight: 400;
 }
 
-/* ---------- Tablet ---------- */
 @media (max-width: 1024px) {
     .fh-section {
         padding: 60px 50px;
@@ -103,7 +94,6 @@
     }
 }
 
-/* ---------- Mobile ---------- */
 @media (max-width: 600px) {
     .fh-section {
         padding: 44px 20px;
@@ -142,7 +132,6 @@
     }
 }
 
-/* ---------- Small Phones ---------- */
 @media (max-width: 400px) {
     .fh-grid {
         grid-template-columns: 1fr;

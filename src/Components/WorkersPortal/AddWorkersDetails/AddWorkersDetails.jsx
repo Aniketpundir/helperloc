@@ -12,21 +12,14 @@ const AddWorkersDetails = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
-    /* ================= REDUX ================= */
-
     const { workerToken } = useSelector((s) => s.auth);
     const { district, state, pinCode } = useSelector((s) => s.location);
     const { workerSignUp } = useSelector((s) => s.workerProfile);
-
-    /* ================= FETCH ================= */
 
     useEffect(() => {
         if (workerToken) dispatch(fetchWorkerPrimaryInfo(workerToken));
         dispatch(fetchLocation());
     }, [workerToken, dispatch]);
-
-    /* ================= STATE ================= */
 
     const [Data, setData] = useState({
         fullName: "",
@@ -57,8 +50,6 @@ const AddWorkersDetails = () => {
         reference: "",
     });
 
-    /* ================= AUTOFILL PROFILE ================= */
-
     useEffect(() => {
 
         if (!workerSignUp?.worker) return;
@@ -73,8 +64,6 @@ const AddWorkersDetails = () => {
 
     }, [workerSignUp]);
 
-    /* ================= AUTOFILL LOCATION ================= */
-
     useEffect(() => {
 
         setData((prev) => ({
@@ -85,8 +74,6 @@ const AddWorkersDetails = () => {
         }));
 
     }, [state, district, pinCode]);
-
-    /* ================= HANDLERS ================= */
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -120,8 +107,6 @@ const AddWorkersDetails = () => {
         }));
     };
 
-    /* ================= SUBMIT ================= */
-
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -146,8 +131,6 @@ const AddWorkersDetails = () => {
         }
     };
 
-    /* ================= UI ================= */
-
     return (
         <div className="profile-container">
 
@@ -155,8 +138,6 @@ const AddWorkersDetails = () => {
             <p className="subtitle">Please fill in the details below to verify your profile.</p>
 
             <form onSubmit={handleSubmit}>
-
-                {/* ================= PERSONAL ================= */}
 
                 <section className="profile-section">
 
@@ -213,8 +194,6 @@ const AddWorkersDetails = () => {
 
                 </section>
 
-                {/* ================= ADDRESS ================= */}
-
                 <section className="profile-section">
 
                     <h3>2. Full Address</h3>
@@ -244,8 +223,6 @@ const AddWorkersDetails = () => {
                     </div>
 
                 </section>
-
-                {/* ================= PROFESSIONAL ================= */}
 
                 <section className="profile-section">
 
@@ -297,8 +274,6 @@ const AddWorkersDetails = () => {
 
                 </section>
 
-                {/* ================= AVAILABILITY ================= */}
-
                 <section className="profile-section">
 
                     <h3>4. Availability & Work Preference</h3>
@@ -328,8 +303,6 @@ const AddWorkersDetails = () => {
                     </div>
 
                 </section>
-
-                {/* ================= EMERGENCY ================= */}
 
                 <section className="profile-section">
 

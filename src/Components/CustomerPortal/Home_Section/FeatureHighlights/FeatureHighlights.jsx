@@ -36,13 +36,10 @@ const features = [
 const FeatureHighlights = () => {
     return (
         <section className="fh-section">
-            {/* Heading */}
             <div className="fh-header">
                 <h2 className="fh-title">Your safety is our priority</h2>
                 <p className="fh-subtitle">Built-in trust and protection for every task</p>
             </div>
-
-            {/* Cards Grid */}
             <div className="fh-grid">
                 {features.map((item) => {
                     const Icon = item.icon;

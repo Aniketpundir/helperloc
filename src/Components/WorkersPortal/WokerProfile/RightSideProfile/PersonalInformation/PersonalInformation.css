@@ -10,7 +10,7 @@
 
 .info-card:hover {
     transform: scale(1.02);
-    box-shadow: 0.5px 10px 20px 0.5px #ec6d13a5;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
 }
 
 .info-card h2 {
@@ -44,21 +44,16 @@
     font-weight: 500;
 }
 
-/* --- Mobile Fix: Media Query (<= 650px) --- */
 @media (max-width: 650px) {
     .info-card {
         max-width: 100%;
         margin: 15px 0;
-        /* Full width, less vertical margin */
         padding: 15px 20px;
-        /* Reduced padding */
         box-shadow: none;
-        /* Simplify card appearance */
         border-radius: 0;
     }
 
     .info-grid {
-        /* Collapse to a single column */
         grid-template-columns: 1fr;
         gap: 15px 0;
     }

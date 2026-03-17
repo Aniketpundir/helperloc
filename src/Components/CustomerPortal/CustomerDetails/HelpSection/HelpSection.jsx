@@ -29,7 +29,6 @@ const HelpSection = () => {
             <h1 data-aos="fade-down">Support & Help</h1>
             <p data-aos="fade-down">Find answers to common questions or get in touch with our support team.</p>
 
-            {/* FAQ Section */}
             <div data-aos="fade-down" className="faq-section">
                 <div data-aos="fade-down" className="faq-header">
                     <FaQuestionCircle className="faq-icon" /> Frequently Asked Questions
@@ -50,7 +49,6 @@ const HelpSection = () => {
                 ))}
             </div>
 
-            {/* Complaint and Chat */}
             <div data-aos="fade-up" className="support-actions">
                 <div data-aos="fade-up" className="card">
                     <FaExclamationCircle className="card-icon red" />
@@ -66,7 +64,6 @@ const HelpSection = () => {
                 </div>
             </div>
 
-            {/* Track Support */}
             <div data-aos="fade-up" className="track-support">
                 <FaSyncAlt data-aos="fade-up" className="track-icon" />
                 <h3>Track Support Request Status</h3>

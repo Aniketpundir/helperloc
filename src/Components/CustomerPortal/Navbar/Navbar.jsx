@@ -231,8 +231,6 @@ const Navbar = () => {
 
             </div>
 
-            {/* ================= RIGHT ================= */}
-
             <div className="navbar-right">
 
                 {!workerToken && !customerToken ? (

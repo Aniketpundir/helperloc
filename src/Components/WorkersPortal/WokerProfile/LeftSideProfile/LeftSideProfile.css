@@ -29,7 +29,7 @@
 
 .name-and-image-container:hover {
     transform: scale(1.02);
-    box-shadow: 0.5px 10px 20px 0.5px #ec6d13a5;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
 }
 
 .worker-profile-image {
@@ -81,7 +81,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #ee7219f9;
+    background-color: #0182db;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
@@ -94,7 +94,7 @@
 }
 
 .name-and-image-container button:hover {
-    background-color: #ee7219c6;
+    background-color: #046cb1;
 }
 
 .name-and-image-container button svg {
@@ -118,14 +118,14 @@
 
 .left-side-profile-container .worker-about:hover {
     transform: scale(1.02);
-    box-shadow: 0.5px 10px 20px 0.5px #ec6d13a5;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
 }
 
 .left-side-profile-container .worker-about h3 {
     font-size: 20px;
     font-weight: 600;
     color: #333;
-    border-bottom: 2px solid #ee7219f9;
+    border-bottom: 2px solid #0182db;
 }
 
 .left-side-profile-container .worker-about p {

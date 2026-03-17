@@ -11,7 +11,7 @@
 }
 
 .service-card:hover {
-    box-shadow: 0.5px 10px 20px 0.5px #1f65fcd7;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
     transform: scale(1.05);
 }
 
@@ -41,7 +41,7 @@
     margin: 15px 0 10px;
     padding: 7px 70px;
     cursor: pointer;
-    background-color: #1f64fc;
+    background-color: #0182db;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -49,7 +49,7 @@
 }
 
 .service-btn:hover {
-    background-color: #1f65fcd7;
+    background-color: #046cb1;
 }
 
 @media (max-width: 650px) {

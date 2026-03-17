@@ -13,7 +13,6 @@
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ========== LEFT SIDE ========== */
 .hero-left {
     flex: 1;
     max-width: 520px;
@@ -51,7 +50,6 @@
     line-height: 1.6;
 }
 
-/* ========== FORM ========== */
 .hero-form {
     display: flex;
     flex-direction: column;
@@ -113,7 +111,6 @@
     transform: translateY(-1px);
 }
 
-/* ========== RIGHT SIDE — IMAGE ========== */
 .hero-right {
     flex: 1;
     display: flex;
@@ -182,12 +179,12 @@
     color: #777;
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
     .hero-section {
+        margin-top: 8%;
         flex-direction: column;
-        padding: 40px 24px;
         min-height: auto;
+        padding: 42px 0px !important;
     }
 
     .hero-heading {
@@ -200,6 +197,13 @@
 }
 
 @media (max-width: 500px) {
+    .hero-section {
+        margin-top: 20%;
+        flex-direction: column;
+        min-height: auto;
+        padding: 10px 20px !important;
+    }
+
     .hero-heading {
         font-size: 28px;
     }

@@ -12,22 +12,13 @@ const SubmissionSuccess = () => {
     };
     return (
         <div className="success-container">
-            {/* Success Icon */}
             <div className="success-icon">✔</div>
-
-            {/* Title */}
             <h1 className="success-title">Profile Submitted Successfully!</h1>
-
-            {/* Subtitle */}
             <p className="success-subtitle">
                 Thank you for submitting your profile. Our team will review it shortly,
                 and you'll receive a notification once it's approved.
             </p>
-
-            {/* Button */}
             <button onClick={() => { Navigate("/worker-profile"), handleClick(), window.location.reload() }} className="dashboard-btn">Go to Dashboard</button>
-
-            {/* What's Next Section */}
             <div className="next-steps">
                 <h2>What's Next?</h2>
                 <ul>

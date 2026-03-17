@@ -26,7 +26,7 @@
     align-items: center;
     background-color: #eff6ff;
     /* Light blue background */
-    color: #2563eb;
+    color: #0182db;
     /* Darker blue text */
     padding: 15px 20px;
     border-radius: 8px;
@@ -38,7 +38,7 @@
 
 .bell-icon {
     margin-right: 12px;
-    color: #2563eb;
+    color: #0182db;
 }
 
 .notification-banner span {
@@ -49,7 +49,7 @@
 .view-all-button {
     background: none;
     border: none;
-    color: #2563eb;
+    color: #0182db;
     font-weight: 600;
     margin-left: 20px;
     cursor: pointer;
@@ -62,10 +62,8 @@
     background-color: #e0f2fe;
 }
 
-/* List of Job Cards */
 .job-cards-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Space between job cards */
 }

@@ -1,10 +1,9 @@
 .OTPbutton {
-    /* position: absolute; */
     margin-top: 10px;
     padding: 12px 14px;
     border-left: none;
-    background-color: #ec6d13;
-    border: 1px solid #ec6d13;
+    background-color: #0182db;
+    border: 1px solid #046cb1;
     color: #fff;
     margin-left: -10px;
     font-size: 16px;

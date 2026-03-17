@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./BookingConformation.css"
 import { MdOutlineVerified } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';

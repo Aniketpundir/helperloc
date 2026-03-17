@@ -28,14 +28,14 @@
 }
 
 .How-Works-container:hover {
-    box-shadow: 0.5px 10px 20px 0.5px #1f65fc5c;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
     transform: scale(1.05);
     transition: .3s all;
 }
 
 .How-Works-container span {
     border-radius: 50%;
-    background-color: #1f64fc;
+    background-color: #0182db;
     height: 40px;
     width: 40px;
 }
@@ -58,7 +58,7 @@
 
 .How-Works button {
     margin: 0 40%;
-    background-color: #1f64fc;
+    background-color: #0182db;
     padding: 10px 15px;
     border: none;
     border-radius: 8px;
@@ -66,11 +66,11 @@
     font-weight: 500;
     cursor: pointer;
     transition: 0.5s;
-    box-shadow: .5px 10px 20px 5px #1f65fc5c;
+    box-shadow: .5px 10px 20px 5px #046cb1;
 }
 
 .How-Works button:hover {
-    box-shadow: .5px 10px 20px 5px #1f65fc7d;
+    box-shadow: .5px 10px 20px 5px #046cb1;
     transition: .3s all;
 }
 

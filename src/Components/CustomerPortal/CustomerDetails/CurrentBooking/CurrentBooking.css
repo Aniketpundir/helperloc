@@ -96,7 +96,7 @@
 }
 
 .card.active {
-    border-color: #ec6d13;
+    border-color: #0182db;
     background: #fff7f2;
 }
 
@@ -273,7 +273,6 @@
     background: #fecaca;
 }
 
-/* ====== Rating Section ====== */
 .rating-section {
     margin-top: 16px;
     padding: 16px;
@@ -288,7 +287,6 @@
     margin-bottom: 12px;
 }
 
-/* Circles for rating */
 .rating-circles {
     display: flex;
     gap: 10px;
@@ -314,13 +312,11 @@
 }
 
 .rating-circles .circle.selected {
-    background: #ec6d13;
-    /* blue background when selected */
+    background: #0182db;
     color: #fff;
-    border-color: #ec6d13;
+    border-color: #0182db;
 }
 
-/* Feedback textarea */
 .rating-section textarea {
     width: 100%;
     min-height: 70px;
@@ -333,13 +329,12 @@
 }
 
 .rating-section textarea:focus {
-    border-color: #ec6d13;
+    border-color: #0182db;
     outline: none;
 }
 
-/* Submit button */
 .rating-section .submit-btn {
-    background: #ec6d13;
+    background: #0182db;
     color: #fff;
     font-weight: 600;
     font-size: 14px;
@@ -351,7 +346,7 @@
 }
 
 .rating-section .submit-btn:hover {
-    background: #ec6d13c2;
+    background: #046cb1;
 }
 
 

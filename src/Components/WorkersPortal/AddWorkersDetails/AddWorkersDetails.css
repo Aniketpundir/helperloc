@@ -76,7 +76,7 @@ h2 {
 }
 
 .skill-tag {
-    background: #d75f0f;
+    background: #0182db;
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
@@ -90,7 +90,7 @@ h2 {
 .remove-skill-btn {
     background: white;
     border: none;
-    color: #d75f0f;
+    color: #0182db;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -115,7 +115,7 @@ h2 {
 }
 
 .available-checkbox input[type="checkbox"] {
-    accent-color: #d75f0f;
+    accent-color: #0182db;
 }
 
 input,
@@ -132,7 +132,7 @@ textarea {
 
 .add-skill-btn {
     padding: 3px 6px;
-    background-color: #d75f0f;
+    background-color: #0182db;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -153,7 +153,7 @@ textarea {
 }
 
 .btn.submit {
-    background: #d75f0f;
+    background: #0182db;
     color: white;
 }
 
@@ -162,7 +162,7 @@ textarea {
     align-items: center;
     padding: 5px 12px;
     margin: 5px 5px 0 0;
-    background-color: #d75f0f;
+    background-color: #0182db;
     color: #fff;
     border-radius: 20px;
     font-size: 14px;

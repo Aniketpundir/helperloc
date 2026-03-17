@@ -36,7 +36,7 @@
 }
 
 .HowItWork-main-content:hover {
-    box-shadow: 0.5px 10px 20px 0.5px #1f65fca2;
+    box-shadow: 0.5px 10px 20px 0.5px #046cb1;
     transform: scale(1.05);
     transition: .3s all;
 }
@@ -44,7 +44,7 @@
 .HowItWork-logo {
     width: 55px;
     height: 55px;
-    background-color: #1f64fc;
+    background-color: #0182db;
     display: flex;
     justify-content: center;
     align-items: center;

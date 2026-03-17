@@ -46,7 +46,7 @@
     top: 0;
     width: 20px;
     height: 20px;
-    background-color: #4a90e2;
+    background-color: #0182db;
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.3);
@@ -62,7 +62,7 @@
 }
 
 .milestone-header {
-    color: #4a90e2;
+    color: #0182db;
     font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 5px;
@@ -71,7 +71,7 @@
 
 .milestone-year {
     font-size: 0.9rem;
-    color: #ec6d13;
+    color: #0182db;
 }
 
 .milestone-title {

@@ -17,7 +17,6 @@
     margin-bottom: 24px;
 }
 
-/* FAQ Section */
 .faq-section {
     background: #fff;
     border-radius: 12px;
@@ -37,7 +36,7 @@
 }
 
 .faq-icon {
-    color: #2563eb;
+    color: #0182db;
 }
 
 .faq-item {
@@ -70,7 +69,6 @@
     padding: 0 0 12px 0;
 }
 
-/* Cards Section */
 .support-actions {
     display: flex;
     gap: 20px;
@@ -126,7 +124,6 @@
     background: #f3f4f6;
 }
 
-/* Track Support */
 .track-support {
     background: #fff;
     border-radius: 12px;
@@ -136,7 +133,7 @@
 }
 
 .track-icon {
-    color: #2563eb;
+    color: #0182db;
     margin-bottom: 8px;
 }
 
@@ -166,7 +163,7 @@
 }
 
 .track-input button {
-    background: #2563eb;
+    background: #0182db;
     color: white;
     border: none;
     padding: 8px 14px;
@@ -176,10 +173,9 @@
 }
 
 .track-input button:hover {
-    background: #1d4ed8;
+    background: #046cb1;
 }
 
-/* Responsive */
 @media (max-width: 650px) {
     .support-help h1 {
         font-size: 24px;

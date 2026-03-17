@@ -24,14 +24,10 @@ const CurrentBooking = () => {
     const workers = bookingWorkerList || [];
     const isMobile = windowWidth <= 650;
 
-    /* ================= FETCH ================= */
-
     useEffect(() => {
         if (!customerToken) return;
         dispatch(fetchUpcomingBookings(customerToken));
     }, [customerToken]);
-
-    /* Keep selected worker stable */
 
     useEffect(() => {
         if (workers.length > 0 && !selectedWorker) setSelectedWorker(workers[0]);
@@ -43,7 +39,6 @@ const CurrentBooking = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // ---- Cancel Form ----
     const CancelForm = ({ bookingId, onClose }) => {
         const [reason, setReason] = useState("");
         const [otherReason, setOtherReason] = useState("");
@@ -105,7 +100,6 @@ const CurrentBooking = () => {
         );
     };
 
-    // ---- Rating Form ----
     const RatingForm = ({ workerId, bookingId, onClose }) => {
         const [rating, setRating] = useState(0);
         const [feedback, setFeedback] = useState("");
@@ -160,8 +154,6 @@ const CurrentBooking = () => {
         );
     };
 
-    // Worker Approval
-
     const approvalHandle = async (bookingId) => {
 
         try {
@@ -178,7 +170,6 @@ const CurrentBooking = () => {
         }
     };
 
-    // ---- Booking Details ----
     const BookingDetails = ({ worker }) => (
         <div className="details-body">
             <p><strong>Booking Code</strong>: {worker.bookingCode}</p>
