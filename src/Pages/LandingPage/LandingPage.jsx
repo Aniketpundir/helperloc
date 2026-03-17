@@ -20,7 +20,7 @@ const LandingPage = () => {
 
                     </div>
                     <div data-aos="fade-down" className='landing-button'>
-                        <button className='forCustomer' onClick={() => {
+                        <button disabled style={{ cursor: "not-allowed" }} className='forCustomer' onClick={() => {
                             navigate("/customer-signup")
                         }}>SignUp as a Customer</button>
                         <button className='forWorkers' onClick={() => {
