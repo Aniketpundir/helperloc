@@ -1,0 +1,40 @@
+.admins-dashboard {
+    /* margin: 0 10px; */
+    min-height: 100vh;
+    /* background: #060d1a; */
+    background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+    padding: 20px 24px;
+}
+
+.admins-content {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+}
+
+@media (max-width: 768px) {
+    .admins-dashboard {
+        padding: 24px 16px;
+    }
+
+    .admins-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .admins-dashboard {
+        padding: 16px 10px;
+    }
+
+    .admins-content {
+        max-width: 950px;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}

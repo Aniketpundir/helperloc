@@ -1,0 +1,301 @@
+/* ============================================================
+   NAVBAR — INDUSTRY LEVEL
+   ============================================================
+   🎨 COLORS CUSTOMIZE KARNE KE LIYE SIRF YE SECTION BADLO:
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   COLOR TOKENS — Yahan se saare colors control hote hain
+   ---------------------------------------------------------- */
+.admin-navbar {
+    /* Background */
+    --nb-bg: #0f172a;
+    /* Navbar ka main background */
+    --nb-bg-scrolled: #0a0f1e;
+    /* Scroll karne ke baad background */
+    --nb-border: rgba(255, 255, 255, 0.07);
+    /* Bottom border color */
+
+    /* Brand / Logo */
+    --nb-brand-color: #ffffff;
+    /* Logo text color */
+    --nb-brand-icon-color: #38bdf8;
+    /* Logo icon color */
+
+    /* Nav Links */
+    --nb-link-color: #94a3b8;
+    /* Normal link color */
+    --nb-link-hover-color: #ffffff;
+    /* Hover link color */
+    --nb-link-hover-bg: rgba(56, 189, 248, 0.08);
+    /* Hover background */
+
+    /* Active Link */
+    --nb-active-color: #38bdf8;
+    /* Active link text color */
+    --nb-active-bg: rgba(56, 189, 248, 0.12);
+    /* Active background */
+    --nb-active-border: #38bdf8;
+    /* Active border accent */
+
+    /* Icon accent */
+    --nb-icon-color: #38bdf8;
+
+    /* Hamburger (mobile) */
+    --nb-ham-color: #94a3b8;
+
+    /* Mobile Drawer */
+    --nb-drawer-bg: #0d1526;
+
+    /* Shadow */
+    --nb-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   BASE NAVBAR
+   ============================================================ */
+.admin-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--nb-bg);
+    border-bottom: 1px solid var(--nb-border);
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-navbar--scrolled {
+    background: var(--nb-bg-scrolled);
+    box-shadow: var(--nb-shadow);
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.admin-navbar__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* ============================================================
+   BRAND / LOGO
+   ============================================================ */
+.admin-navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.admin-navbar__brand-icon {
+    font-size: 22px;
+    color: var(--nb-brand-icon-color);
+    line-height: 1;
+    animation: admin-spin-slow 6s linear infinite;
+}
+
+@keyframes admin-spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.admin-navbar__brand-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--nb-brand-color);
+    letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   DESKTOP LINKS
+   ============================================================ */
+.admin-navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.admin-navbar__link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--nb-link-color);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+}
+
+.admin-navbar__link:hover {
+    color: var(--nb-link-hover-color);
+    background: var(--nb-link-hover-bg);
+}
+
+.admin-navbar__link--active {
+    color: var(--nb-active-color);
+    background: var(--nb-active-bg);
+    border-color: var(--nb-active-border);
+    font-weight: 600;
+}
+
+.admin-navbar__link-icon {
+    font-size: 12px;
+    color: var(--nb-icon-color);
+    opacity: 0.85;
+}
+
+/* ============================================================
+   HAMBURGER BUTTON (Mobile)
+   ============================================================ */
+.admin-navbar__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--nb-border);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+
+.admin-navbar__hamburger:hover {
+    border-color: var(--nb-active-border);
+}
+
+.admin-navbar__hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--nb-ham-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate to X when open */
+.admin-navbar__hamburger--open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.admin-navbar__hamburger--open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.admin-navbar__hamburger--open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE DRAWER
+   ============================================================ */
+.admin-navbar__drawer {
+    display: none;
+    flex-direction: column;
+    background: var(--nb-drawer-bg);
+    border-top: 1px solid var(--nb-border);
+    padding: 10px 16px 16px;
+    gap: 4px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.admin-navbar__drawer--open {
+    max-height: 300px;
+    padding: 10px 16px 16px;
+}
+
+.admin-navbar__drawer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--nb-link-color);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: color 0.2s, background 0.2s;
+}
+
+.admin-navbar__drawer-link:hover {
+    color: var(--nb-link-hover-color);
+    background: var(--nb-link-hover-bg);
+}
+
+.admin-navbar__drawer-link--active {
+    color: var(--nb-active-color);
+    background: var(--nb-active-bg);
+    border-color: var(--nb-active-border);
+    font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .admin-navbar__link {
+        margin-top: 20px;
+        padding: 8px 12px;
+        font-size: 13.5px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+    .admin-navbar__links {
+        display: none;
+    }
+
+    .admin-navbar__hamburger {
+        display: flex;
+    }
+
+    .admin-navbar__drawer {
+        display: flex;
+    }
+}
+
+/* Small Mobile (below 360px) */
+@media (max-width: 360px) {
+    .admin-navbar__container {
+        padding: 0 14px;
+        height: 58px;
+    }
+
+    .admin-navbar__brand-text {
+        font-size: 15px;
+    }
+
+    .admin-navbar__drawer-link {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}

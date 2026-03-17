@@ -1,0 +1,169 @@
+/* ===== MAIN WRAPPER ===== */
+
+.CustomerLogin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff7f1, #ffffff);
+    padding: 20px;
+}
+
+/* ===== CONTENT BOX ===== */
+
+.CustomerLogin-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== LEFT SIDE ===== */
+
+.CustomerLogin-text-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.CustomerLogin-text-form h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.CustomerLogin-text-form h5 {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+}
+
+/* ===== FORM ===== */
+
+.CustomerLogin-text-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* ===== INPUT ===== */
+
+.CustomerLogin-text-form form input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.CustomerLogin-text-form form input:focus {
+    outline: none;
+    border-color: #1f64fc;
+    box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
+}
+
+/* ===== PASSWORD FIELD ===== */
+
+.input-field1 {
+    position: relative;
+}
+
+.hide-show {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background-color: #1f64fc !important;
+}
+
+/* ===== BUTTON ===== */
+
+.login-button {
+    padding: 12px;
+    background-color: #1f64fc !important;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #1f65fcbd !important;
+}
+
+/* ===== SIGNUP TEXT ===== */
+
+.CustomerLogin-text-form form p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.CustomerLogin-text-form form span {
+    color: #1f64fc;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ===== RIGHT IMAGE ===== */
+
+.CustomerLogin-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.CustomerLogin-img img {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 992px) {
+    .CustomerLogin-content {
+        flex-direction: column;
+        padding: 30px;
+        gap: 40px;
+    }
+
+    .CustomerLogin-img img {
+        max-width: 300px;
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+    .CustomerLogin-content {
+        padding: 22px;
+        gap: 25px;
+    }
+
+    .CustomerLogin-text-form h1 {
+        font-size: 24px;
+    }
+
+    .CustomerLogin-text-form form input {
+        padding: 10px;
+    }
+
+    .login-button {
+        padding: 10px;
+    }
+
+    .CustomerLogin-img {
+        display: none;
+    }
+}

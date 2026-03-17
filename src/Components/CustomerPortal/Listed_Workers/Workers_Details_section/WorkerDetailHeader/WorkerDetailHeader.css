@@ -1,0 +1,166 @@
+.worker-card {
+    margin: 100px auto 40px auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background-color: #fff;
+    padding: 14px 18px;
+
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    width: 100%;
+    max-width: 700px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* ===== IMAGE ===== */
+
+.worker-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== INFO ===== */
+
+.worker-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ===== NAME ===== */
+
+.worker-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ===== DETAILS ===== */
+
+.worker-details {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ===== VERIFIED ===== */
+
+.verified {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #4caf50;
+    font-size: 14px;
+}
+
+.verified-icon {
+    font-size: 15px;
+}
+
+/* ===== BUTTON ===== */
+
+.book-button {
+    background-color: #ec6d13;
+    color: white;
+    border: none;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.25s ease;
+}
+
+.book-button:hover {
+    background-color: #d75f0f;
+}
+
+/* ===================== */
+/* ✅ TABLET RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 900px) {
+
+    .worker-card {
+        padding: 14px;
+        gap: 12px;
+        max-width: 95%;
+    }
+
+    .worker-image {
+        width: 65px;
+        height: 65px;
+    }
+
+}
+
+/* ===================== */
+/* ✅ MOBILE RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 650px) {
+
+    .worker-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .worker-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .worker-info {
+        align-items: center;
+    }
+
+    .worker-name {
+        font-size: 16px;
+    }
+
+    .worker-details {
+        font-size: 13px;
+    }
+
+    .verified {
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .book-button {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+        margin-top: 6px;
+    }
+}
+
+/* ===================== */
+/* ✅ SMALL MOBILE */
+/* ===================== */
+
+@media (max-width: 400px) {
+
+    .worker-name {
+        font-size: 15px;
+    }
+
+    .worker-details {
+        font-size: 12px;
+    }
+
+}

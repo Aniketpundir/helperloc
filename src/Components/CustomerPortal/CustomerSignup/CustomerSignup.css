@@ -1,0 +1,241 @@
+/* ===== MAIN WRAPPER ===== */
+
+.CustomerSignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #fafafa;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== CARD ===== */
+
+.CustomerSignup-form {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    padding: 30px 26px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    animation: slideUp 0.6s ease;
+}
+
+/* ===== HEADING ===== */
+
+.CustomerSignup-form h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ===== LOGIN LINK ===== */
+
+.login-link {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.login-link span {
+    color: #1f64fc !important;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.login-link span:hover {
+    text-decoration: underline;
+}
+
+/* ===== FORM ===== */
+
+.CustomerSignup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ===== INPUT ===== */
+
+.CustomerSignup-form input {
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.CustomerSignup-form input:focus {
+    outline: none;
+    border-color: #1f64fc;
+    box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
+}
+
+/* ===== PROFILE IMAGE ===== */
+
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-image img,
+.dummy-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+    transition: 0.3s;
+}
+
+/* ===== PASSWORD FIELD ===== */
+
+.input-field1 {
+    position: relative;
+    width: 100%;
+}
+
+/* INPUT FIX */
+
+.password-input {
+    width: 100%;
+    padding: 12px 44px 12px 14px;
+    /* right padding important */
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    font-size: 14px;
+    transition: .25s;
+}
+
+.password-input:focus {
+    outline: none;
+    border-color: #1f64fc;
+    box-shadow: 0 0 0 2px rgba(236, 109, 19, .1);
+}
+
+
+/* TOGGLE FIX */
+
+.hide-show {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 28px;
+
+    background: #1f64fc !important;
+    border-radius: 6px;
+
+    color: white !important;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    transition: .2s;
+}
+
+.hide-show:hover {
+    background: #1f65fcbd;
+}
+
+/* ===== CHECKBOX ===== */
+
+label {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+label input {
+    accent-color: #1f64fc !important;
+}
+
+/* ===== BUTTON ===== */
+
+.CustomerSignup-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #1f64fc;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.CustomerSignup-form button:hover {
+    background: #1f65fcbd;
+}
+
+.CustomerSignup-form button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 900px) {
+    .CustomerSignup-form {
+        padding: 26px 22px;
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .CustomerSignup {
+        padding: 30px 16px;
+    }
+
+    .CustomerSignup-form {
+        padding: 24px 18px;
+    }
+
+    .CustomerSignup-form h2 {
+        font-size: 20px;
+    }
+
+    .CustomerSignup-form input {
+        padding: 11px 12px;
+    }
+
+    .CustomerSignup-form button {
+        padding: 11px;
+    }
+}

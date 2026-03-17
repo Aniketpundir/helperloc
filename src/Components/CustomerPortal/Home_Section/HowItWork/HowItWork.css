@@ -1,0 +1,82 @@
+.HowItWork-container {
+    margin: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HowItWork-container p {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.HowItWork-content {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.HowItWork-main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    box-shadow: 0.5px 10px 20px 0.5px #1f65fc41;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.HowItWork-main-content:hover {
+    box-shadow: 0.5px 10px 20px 0.5px #1f65fca2;
+    transform: scale(1.05);
+    transition: .3s all;
+}
+
+.HowItWork-logo {
+    width: 55px;
+    height: 55px;
+    background-color: #1f64fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.HowItWork-logo svg {
+    font-size: 32px;
+    color: #fff;
+}
+
+.HowItWork-text h2 {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.71);
+    text-align: center;
+}
+
+.HowItWork-text p {
+    text-align: center;
+    font-size: 15px;
+}
+
+@media (max-width:650px) {
+    .HowItWork-container {
+        margin: 50px 30px;
+    }
+
+    .HowItWork-container h1 {
+        font-size: 28px;
+    }
+
+    .HowItWork-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

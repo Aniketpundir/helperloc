@@ -1,0 +1,150 @@
+.fh-section {
+    padding: 70px 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Header ---------- */
+.fh-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.fh-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0d1f1a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.fh-subtitle {
+    font-size: 14.5px;
+    color: #888;
+    font-weight: 400;
+}
+
+/* ---------- Cards Grid ---------- */
+.fh-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* ---------- Single Card ---------- */
+.fh-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 28px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid #e8f5ee;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+
+.fh-card:hover {
+    box-shadow: 0 8px 28px rgba(34, 197, 94, 0.25);
+    /* ✅ green shadow darker */
+    transform: translateY(-4px);
+    border-color: #22c55e;
+    /* ✅ green border on hover */
+}
+
+.fh-icon-wrapper {
+    width: 58px;
+    height: 58px;
+    background-color: #e8f5ee;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.25s ease;
+    /* ✅ smooth icon bg transition */
+}
+
+.fh-card:hover .fh-icon-wrapper {
+    background-color: #22c55e;
+    /* ✅ icon bg green on hover */
+}
+
+.fh-card:hover .fh-icon-wrapper svg {
+    color: #ffffff !important;
+    /* ✅ icon white on hover */
+}
+
+.fh-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0d1f1a;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.fh-card-desc {
+    font-size: 13.5px;
+    color: #888;
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+    .fh-section {
+        padding: 60px 50px;
+    }
+
+    .fh-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    .fh-section {
+        padding: 44px 20px;
+    }
+
+    .fh-title {
+        font-size: 24px;
+    }
+
+    .fh-subtitle {
+        font-size: 13px;
+    }
+
+    .fh-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .fh-card {
+        padding: 28px 18px 24px;
+        gap: 12px;
+        border-radius: 16px;
+    }
+
+    .fh-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .fh-card-title {
+        font-size: 14px;
+    }
+
+    .fh-card-desc {
+        font-size: 12px;
+    }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 400px) {
+    .fh-grid {
+        grid-template-columns: 1fr;
+    }
+}

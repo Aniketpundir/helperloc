@@ -1,0 +1,13 @@
+.right {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+@media(max-width:650px) {
+    .right {
+        margin-right: 0px;
+    }
+}

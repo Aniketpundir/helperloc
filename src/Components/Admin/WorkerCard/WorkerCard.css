@@ -1,0 +1,313 @@
+/* ============================================================
+   WORKER CARD — VERTICAL PROFILE LAYOUT
+   ============================================================
+   🎨 COLORS CUSTOMIZE KARNE KE LIYE SIRF YE VARIABLES BADLO
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@500&display=swap');
+
+.admin-card {
+    /* Backgrounds */
+    --wc-bg: #ffffff;
+    --wc-bg-header: #f8fafc;
+    --wc-border: #e2e8f0;
+    --wc-border-hover: #93c5fd;
+    --wc-radius: 18px;
+    --wc-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    --wc-shadow-hover: 0 4px 24px rgba(37, 99, 235, 0.12), 0 1px 4px rgba(0, 0, 0, 0.06);
+
+    /* Avatar */
+    --wc-avatar-bg: #dbeafe;
+    --wc-avatar-color: #1d4ed8;
+
+    /* Text */
+    --wc-name: #0f172a;
+    --wc-label: #94a3b8;
+    --wc-value: #334155;
+    --wc-code-color: #2563eb;
+
+    /* Status badges */
+    --wc-pending-bg: #fff7ed;
+    --wc-pending-text: #9a3412;
+    --wc-verify-bg: #f0fdf4;
+    --wc-verify-text: #166534;
+    --wc-rejected-bg: #fff1f2;
+    --wc-rejected-text: #9f1239;
+
+    /* Divider */
+    --wc-divider: #f1f5f9;
+
+    /* Button */
+    --wc-btn-bg: #2563eb;
+    --wc-btn-hover: #1d4ed8;
+    --wc-btn-text: #ffffff;
+    --wc-btn-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+
+    /* Select */
+    --wc-select-bg: #f8fafc;
+    --wc-select-border: #cbd5e1;
+    --wc-select-text: #475569;
+}
+
+/* ============================================================
+   CARD BASE — vertical layout
+   ============================================================ */
+.admin-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    background: var(--wc-bg);
+    border: 1px solid var(--wc-border);
+    border-radius: var(--wc-radius);
+    box-shadow: var(--wc-shadow);
+    overflow: hidden;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.admin-card:hover {
+    box-shadow: var(--wc-shadow-hover);
+    border-color: var(--wc-border-hover);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   HEADER — avatar + name + status badge
+   ============================================================ */
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px 16px;
+    background: var(--wc-bg-header);
+    border-bottom: 1px solid var(--wc-divider);
+}
+
+.admin-worker-img {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--wc-bg);
+    box-shadow: 0 0 0 2px var(--wc-border);
+    transition: box-shadow 0.2s;
+}
+
+.admin-card:hover .admin-worker-img {
+    box-shadow: 0 0 0 2px var(--wc-border-hover);
+}
+
+.admin-card-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.admin-details h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--wc-name);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.2px;
+}
+
+/* Status badge — auto color by value */
+.admin-status-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.admin-status-badge.admin-status-pending {
+    background: var(--wc-pending-bg);
+    color: var(--wc-pending-text);
+}
+
+.admin-status-badge.admin-status-verify {
+    background: var(--wc-verify-bg);
+    color: var(--wc-verify-text);
+}
+
+.admin-status-badge.admin-status-rejected {
+    background: var(--wc-rejected-bg);
+    color: var(--wc-rejected-text);
+}
+
+/* ============================================================
+   DETAILS — table rows
+   ============================================================ */
+.admin-details {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-details p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--wc-divider);
+    gap: 12px;
+}
+
+.admin-details p:last-of-type {
+    border-bottom: none;
+}
+
+.admin-details p strong {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--wc-label);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.admin-details p span {
+    font-size: 13px;
+    color: var(--wc-value);
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Referral code — monospace highlight */
+.admin-details p.admin-code-row span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--wc-code-color);
+    background: #eff6ff;
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: 1px solid #bfdbfe;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+.admin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--wc-divider);
+    background: var(--wc-bg-header);
+}
+
+.ref {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-actions button {
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wc-btn-text);
+    background: var(--wc-btn-bg);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--wc-btn-shadow);
+    transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.admin-actions button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.12), transparent);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.admin-actions button:hover {
+    background: var(--wc-btn-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.admin-actions button:active {
+    transform: translateY(0);
+    box-shadow: var(--wc-btn-shadow);
+}
+
+.admin-actions select {
+    flex: 1;
+    padding: 9px 28px 9px 11px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--wc-select-text);
+    background: var(--wc-select-bg);
+    border: 1px solid var(--wc-select-border);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%2394a3b8' d='M5 7L0.5 2.5h9z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.admin-actions select:hover {
+    border-color: #93c5fd;
+}
+
+.admin-actions select:focus {
+    border-color: var(--wc-btn-bg);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.admin-actions select option {
+    background: #fff;
+    color: #334155;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 400px) {
+    .admin-card {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .admin-card-header {
+        padding: 14px 16px 12px;
+    }
+
+    .admin-details {
+        padding: 0 16px;
+    }
+
+    .admin-actions {
+        padding: 14px 16px;
+    }
+
+    .admin-actions button,
+    .admin-actions select {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

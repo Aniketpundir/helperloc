@@ -1,0 +1,146 @@
+.WorkerLogin {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff7f1, #ffffff);
+    padding: 20px;
+}
+
+.WorkerLogin-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.WorkerLogin-text-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.WorkerLogin-text-form h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.WorkerLogin-text-form h5 {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+}
+
+.WorkerLogin-text-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.WorkerLogin-text-form form input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.WorkerLogin-text-form form input:focus {
+    outline: none;
+    border-color: #1f64fc;
+    box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
+}
+
+.input-field1 {
+    position: relative;
+}
+
+.hide-show {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #777;
+}
+
+.login-button {
+    padding: 12px;
+    background: #1f64fc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #1f65fcbd;
+}
+
+.WorkerLogin-text-form form p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.WorkerLogin-text-form form span {
+    color: #1f64fc;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.WorkerLogin-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.WorkerLogin-img img {
+    width: 100%;
+    max-width: 380px;
+}
+
+@media (max-width: 992px) {
+    .WorkerLogin-content {
+        flex-direction: column;
+        padding: 30px;
+        gap: 40px;
+    }
+
+    .WorkerLogin-img img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .WorkerLogin-content {
+        padding: 22px;
+        gap: 25px;
+    }
+
+    .WorkerLogin-text-form h1 {
+        font-size: 24px;
+    }
+
+    .WorkerLogin-text-form form input {
+        padding: 10px;
+    }
+
+    .login-button {
+        padding: 10px;
+    }
+
+    .WorkerLogin-img {
+        display: none;
+    }
+}

@@ -1,0 +1,193 @@
+/* ================= CONTAINER ================= */
+
+.saved-address-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #e5e7eb;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+
+    background: #fff;
+    transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+
+.saved-address-box:hover {
+    border-color: #ec6d13;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= LABEL ================= */
+
+.saved-address-box label {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Radio */
+
+.saved-address-box input[type="radio"] {
+    margin-top: 5px;
+    accent-color: #ec6d13;
+    cursor: pointer;
+}
+
+/* Text */
+
+.saved-address-box p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #374151;
+}
+
+.saved-address-box p b {
+    font-size: 15px;
+    color: #111827;
+}
+
+/* ================= BUTTON ROW ================= */
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Edit + Delete Button */
+
+.edit-address {
+    border: none;
+    background: #ec6d13;
+    padding: 7px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover */
+
+.edit-address:hover {
+    background: #d75f0f;
+    transform: scale(1.05);
+}
+
+.edit-address svg {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+
+    background: #ec6d13;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* Hover */
+
+.pay-btn:hover {
+    background: #d75f0f;
+}
+
+/* Disabled */
+
+.pay-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Cancel */
+
+.cancel-btn {
+    background: #9ca3af;
+}
+
+.cancel-btn:hover {
+    background: #6b7280;
+}
+
+/* ================= FORM ================= */
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Input */
+
+.form-section input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+/* Focus */
+
+.form-section input:focus {
+    border-color: #ec6d13;
+    box-shadow: 0 0 0 2px rgba(236, 109, 19, 0.1);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .saved-address-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .row {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .saved-address-box {
+        padding: 12px;
+    }
+
+    .saved-address-box p {
+        font-size: 13px;
+    }
+
+    .form-section input {
+        font-size: 13px;
+    }
+
+    .pay-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+}
