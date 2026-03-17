@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cropper from "react-easy-crop";
 
 // Reusable Cropper Component
-const ImageCropper = ({ image, onCropDone, onCropCancel }) => {
+const ImageCropper = ({ image, onCropDone }) => {
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
@@ -62,15 +62,10 @@ const ImageCropper = ({ image, onCropDone, onCropCancel }) => {
       <div style={{ display: "flex", marginTop: "20px", flexDirection: "row", gap: "30px" }}>
         <button
           onClick={() => onCropDone(croppedAreaPixels)}
-          style={{ marginRight: "10px", backgroundColor: "#d75f0f", padding: "10px 30px", color: "#fff", border: "none", borderRadius: "8px", fontWeight: "500", cursor: "pointer" }}
+          style={{ marginRight: "10px", backgroundColor: "#0182db", padding: "10px 30px", color: "#fff", border: "none", borderRadius: "8px", fontWeight: "500", cursor: "pointer" }}
         >
           Done
         </button>
-        <button
-          onClick={onCropCancel}
-          style={{ marginRight: "10px", backgroundColor: "#d75f0f", padding: "10px 25px", color: "#fff", border: "none", borderRadius: "8px", fontWeight: "500", cursor: "pointer" }}
-        >
-          Cancel</button>
       </div>
     </div>
   );
