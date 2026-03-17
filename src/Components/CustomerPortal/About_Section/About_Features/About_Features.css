@@ -1,5 +1,4 @@
 .About_Features {
-    /* margin: 70px 60px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
