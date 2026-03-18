@@ -34,6 +34,13 @@
 .footer-middle2 p {
     color: #ffffff;
     cursor: pointer;
+    transition: all .3s;
+}
+
+.footer-left p:hover,
+.footer-middle1 p:hover,
+.footer-middle2 p:hover {
+    transform: scale(1.1);
 }
 
 .footer-middle1,
@@ -58,6 +65,12 @@
 .social-icons p svg {
     color: #ffffff;
     font-size: 26px;
+    transition: all .3s;
+}
+
+.social-icons p svg:hover {
+    transform: scale(1.50);
+    text-decoration: underline;
 }
 
 .copyright hr {
