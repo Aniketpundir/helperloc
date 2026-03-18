@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
                 <div className='copyright'>
                     <hr />
-                    <p >&copy; 2025 E - Labour. All Rights Reserved.</p>
+                    <p >&copy; 2026 HelperLoc. All Rights Reserved.</p>
                 </div>
             </div>
         </>

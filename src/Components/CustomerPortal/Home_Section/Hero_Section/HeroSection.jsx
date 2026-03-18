@@ -9,11 +9,10 @@ const HeroSection = () => {
         <section className="hero-section">
             <div className="hero-left">
                 <h1 className="hero-heading">
-                    Get Help With Your<br />Everyday Tasks
+                    Get Things Done, <br />Effortlessly
                 </h1>
                 <p className="hero-subtext">
-                    Book trusted local professionals for cleaning, repairs,<br />
-                    moving, delivery, and more.
+                    Book reliable local professionals for cleaning, repairs, moving, delivery, and other daily tasks — trusted, affordable, and hassle-free.
                 </p>
 
                 <div className="hero-form">

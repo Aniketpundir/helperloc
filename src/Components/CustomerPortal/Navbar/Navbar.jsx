@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../../assets/logo.jpg";
+import logo from "../../../assets/helperlocklogo.png";
 import profileImg from "../../../assets/profile_img.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { StoreContext } from "../../../Context/StoreContext";
@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className={`side-drawer ${showMenu ? "show" : ""}`}>
 
                 <div className="drawer-logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="HelperLoc" />
                 </div>
 
                 {!hideWorkerPanel ? (
@@ -162,8 +162,8 @@ const Navbar = () => {
             {showMenu && <div className="overlay" onClick={() => setShowMenu(false)}></div>}
 
             <div className="navbar-left">
-                <img src={logo} alt="Logo" />
-                <h3>E - Labour</h3>
+                <img src={logo} alt="HelperLoc" />
+                <h3>HelperLoc</h3>
             </div>
 
             <div className="navbar-middle">
