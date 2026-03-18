@@ -43,11 +43,13 @@ import RejectedWorker from "./Components/Admin/RejectedWorker/RejectedWorker"
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>
+
             <Route path='/admin-dashboard' element={<Layout3 />}>
                 <Route index element={<Dashboard />} />
                 <Route path='/admin-dashboard/verify-worker' element={<VerifyWorker />} />
                 <Route path='/admin-dashboard/rejected-worker' element={<RejectedWorker />} />
             </Route>
+
             <Route path='/' element={<Layout />}>
                 <Route path='/landing-page' element={<LandingPage />} />
                 <Route path='/customer-signup' element={<CustomerSignup />} />
@@ -72,6 +74,7 @@ const router = createBrowserRouter(
                 <Route path='/Support-Section' element={<HelpSection />} />
                 <Route path='/Past-Booking' element={<PastBooking />} />
             </Route>
+
             <Route path='/worker-profile' element={<WorkerLayout />}>
                 <Route path='/worker-profile' element={<WorkerProfile />} />
                 <Route path='/worker-profile/Dashboard' element={<JobDashboard />} />
@@ -80,6 +83,7 @@ const router = createBrowserRouter(
                 <Route path='/worker-profile/add-workers-details' element={<AddWorkersDetails />} />
                 <Route path='/worker-profile/submission-success' element={<SubmissionSuccess />} />
             </Route>
+
         </Route>
     )
 )

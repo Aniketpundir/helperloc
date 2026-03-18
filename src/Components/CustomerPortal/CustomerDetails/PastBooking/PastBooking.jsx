@@ -20,6 +20,14 @@ const PastBooking = () => {
         }
     }, [customerToken, dispatch]);
 
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Support-Section")
+        }
+    }, [customerToken, Navigate]);
+
     const navigate = (id, title) => {
         Navigate(`/Service-Categories/Listed-Workers/${title}/Worker-Details/${id}/Booking-Section`);
     };

@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./BookingConformation.css"
 import { MdOutlineVerified } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 
 const BookingConformation = () => {
     const Navigate = useNavigate();
+
+    const customerToken = localStorage.getItem("customerToken")
+
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Service-Categories/Listed-Workers/:title/Worker-Details/:id/booking-section")
+        }
+    }, [customerToken, Navigate]);
+
 
     const handleClick = () => {
         window.scrollTo({

@@ -36,6 +36,14 @@ const BookWorkers = () => {
     const [editId, setEditId] = useState(null);
     const [serviceDate, setServiceDate] = useState("");
 
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Service-Categories/Listed-Workers/:title/Worker-Details/:id/Booking-Section/Booking-Conformation")
+        }
+    }, [customerToken, Navigate]);
+
     const [newAddress, setNewAddress] = useState({
         name: "",
         phone: "",

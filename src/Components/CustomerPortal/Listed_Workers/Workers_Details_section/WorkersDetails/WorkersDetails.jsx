@@ -10,12 +10,22 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchSingleWorker } from "../../../../../redux/slices/workersSlice";
 
-const WorkersDetails = () => {
+import { useNavigate } from "react-router-dom";
 
+const WorkersDetails = () => {
+    const Navigate = useNavigate();
     const dispatch = useDispatch();
     const { id } = useParams();
 
     const token = localStorage.getItem("customerToken");
+
+    useEffect(() => {
+        if (!token) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Service-Categories/Listed-Workers/:title")
+        }
+    }, [token, Navigate]);
 
     useEffect(() => {
         if (id && token) {

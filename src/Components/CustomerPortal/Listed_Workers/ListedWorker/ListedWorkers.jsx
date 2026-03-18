@@ -9,7 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWorkersList } from "../../../../redux/slices/workersSlice";
 import { fetchLocation } from "../../../../redux/slices/locationSlice";
 
+import { useNavigate } from "react-router-dom";
+
 const ListedWorkers = () => {
+    const Navigate = useNavigate()
     const dispatch = useDispatch();
     const { title } = useParams();
 
@@ -22,6 +25,16 @@ const ListedWorkers = () => {
         dispatch(fetchWorkersList(title));
         dispatch(fetchLocation());
     }, [title, dispatch]);
+
+    const customerToken = localStorage.getItem("customerToken");
+
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Service-Categories/Listed-Workers/:title")
+        }
+    }, [customerToken, Navigate]);
 
     return (
         <div className="ListedWorker">

@@ -5,14 +5,23 @@ import axios from "axios";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUpcomingBookings } from "../../../../redux/slices/bookingsSlice";
+import { useNavigate } from "react-router-dom";
 
 const URL_LINK = "https://e-labour-backend.onrender.com/";
 
 const CurrentBooking = () => {
-
+    const Navigate = useNavigate();
     const dispatch = useDispatch();
 
     const customerToken = localStorage.getItem("customerToken");
+
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Customer-Profile")
+        }
+    }, [customerToken, Navigate]);
 
     const { bookingWorkerList } = useSelector((s) => s.bookings);
 

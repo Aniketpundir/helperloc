@@ -15,8 +15,10 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 
-const CustomerProfile = () => {
+import { useNavigate } from "react-router-dom";
 
+const CustomerProfile = () => {
+    const Navigate = useNavigate();
     const dispatch = useDispatch();
 
     const { customerProfile, customerToken, loading } = useSelector((s) => s.auth);
@@ -46,6 +48,14 @@ const CustomerProfile = () => {
             dispatch(fetchAddresses(customerToken));
         }
     }, [customerToken, dispatch]);
+
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Customer-Profile")
+        }
+    }, [customerToken, Navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;

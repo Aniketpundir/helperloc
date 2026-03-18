@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./HelpSection.css";
 import { FaQuestionCircle, FaExclamationCircle, FaComments, FaSyncAlt } from "react-icons/fa";
 
 const HelpSection = () => {
+    const Navigate = useNavigate()
     const [openIndex, setOpenIndex] = useState(null);
+
+    const customerToken = localStorage.getItem("customerToken");
+
+    useEffect(() => {
+        if (!customerToken) {
+            Navigate("/customer-login");
+        } else {
+            Navigate("/Support-Section")
+        }
+    }, [customerToken, Navigate]);
 
     const toggleFAQ = (index) => {
         setOpenIndex(openIndex === index ? null : index);
