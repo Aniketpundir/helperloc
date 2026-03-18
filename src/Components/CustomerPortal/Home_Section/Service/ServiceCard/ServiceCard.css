@@ -29,11 +29,19 @@
 }
 
 .service-text {
+    text-align: center;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.service-text h3 {
+    text-align: center;
+}
+
+.service-text p {
     text-align: center;
 }
 
@@ -57,16 +65,26 @@
         display: flex;
         flex-direction: column;
         height: 40vh;
+        border-radius: 0px;
     }
 
     .service-img {
         height: 20vh;
     }
 
+    .service-img img {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .service h3 {
+        text-align: center;
+    }
+
     .service-text {
         padding: 10px;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         text-align: start;
         gap: 5px;
     }

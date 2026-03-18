@@ -42,10 +42,10 @@
         margin: 20px 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 23px;
+        gap: 10px;
     }
 
     .Top-service .more-service {
-        margin: 10px 30%;
+        margin: 0px 30%;
     }
 }
