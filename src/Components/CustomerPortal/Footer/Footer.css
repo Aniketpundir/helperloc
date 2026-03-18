@@ -6,7 +6,7 @@
     padding-right: 30px;
     display: flex;
     flex-direction: column;
-    background-color: #101828;
+    background-color: #0182db;
     gap: 20px;
 }
 
@@ -26,13 +26,13 @@
 .footer-middle1 h3,
 .footer-middle2 h3,
 .footer-right h3 {
-    color: #ffffffcd;
+    color: #ffffff;
 }
 
 .footer-left p,
 .footer-middle1 p,
 .footer-middle2 p {
-    color: #ffffff86;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -56,16 +56,16 @@
 }
 
 .social-icons p svg {
-    color: #ffffff86;
+    color: #ffffff;
     font-size: 26px;
 }
 
 .copyright hr {
-    color: #ffffff9f;
+    color: #ffffff;
 }
 
 .copyright p {
-    color: #ffffff86;
+    color: #ffffff;
     text-align: center;
 }
 
