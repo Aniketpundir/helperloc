@@ -16,6 +16,18 @@ const WorkersLogin = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
+
+        if (!token) {
+            Navigate("/workers-login")
+        } else {
+            Navigate("/worker-profile")
+        }
+    }, [])
+
+
+
     const [data, setData] = useState({
         email: "",
         password: "",

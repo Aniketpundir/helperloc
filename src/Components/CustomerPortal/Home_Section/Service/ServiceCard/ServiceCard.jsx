@@ -15,7 +15,7 @@ const ServiceCard = ({ img, title, description }) => {
         if (token) {
             Navigate(`/Service-Categories/Listed-Workers/${title}`)
         } else {
-            Navigate('/customer-login');
+            Navigate('/landing-page');
         }
     }
 

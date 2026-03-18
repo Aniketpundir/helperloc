@@ -26,6 +26,16 @@ const WorkersSignup = () => {
         password: "",
     });
 
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
+
+        if (!token) {
+            navigate("/workers-signup")
+        } else {
+            navigate("/worker-profile")
+        }
+    }, [])
+
     const [file, setFile] = useState(null);
     const [image, setImage] = useState(null);
     const [croppedImage, setCroppedImage] = useState(null);
