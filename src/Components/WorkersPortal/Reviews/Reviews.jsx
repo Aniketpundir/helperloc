@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Reviews.css";
+import { useNavigate } from "react-router-dom";
 
 const Reviews = () => {
     const ratingData = {
@@ -99,6 +100,18 @@ const Reviews = () => {
                 "Good work overall. Communication could be a little better, but the quality was solid.",
         },
     ];
+
+    const Navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
+
+        if (!token) {
+            Navigate("/workers-login")
+        } else {
+            Navigate("/worker-profile/Rating&Reviews")
+        }
+    }, [])
 
     return (
         <div className="ratings-container">

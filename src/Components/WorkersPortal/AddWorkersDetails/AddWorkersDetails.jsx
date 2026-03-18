@@ -131,6 +131,16 @@ const AddWorkersDetails = () => {
         }
     };
 
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
+
+        if (!token) {
+            navigate("/workers-login")
+        } else {
+            navigate("//worker-profile/add-workers-details")
+        }
+    }, [])
+
     return (
         <div className="profile-container">
 

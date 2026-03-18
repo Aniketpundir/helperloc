@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./JobDashboard.css";
-import { StoreContext } from '../../../Context/StoreContext';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const jobsData = [
     {
@@ -39,23 +38,18 @@ const getStatusClass = (status) => {
 };
 
 const JobDashboard = () => {
-    const [jobList, setJobList] = useState([]);
-    const { URL_LINK, workerToken } = useContext(StoreContext);
     const [filter, setFilter] = useState("All");
-    const filteredJobs = filter === "All"
-        ? jobsData
-        : jobsData.filter(job => job.status === filter);
+    const Navigate = useNavigate()
 
-    const jobData = async () => {
-        let newUrl = URL_LINK;
-        newUrl += "";
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
 
-        try {
-            const res = await axios.get(newUrl);
-        } catch (error) {
-
+        if (!token) {
+            Navigate("/workers-login")
+        } else {
+            Navigate("/worker-profile/Dashboard")
         }
-    }
+    }, [])
 
 
     return (

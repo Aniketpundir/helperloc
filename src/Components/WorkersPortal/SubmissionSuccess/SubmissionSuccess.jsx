@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./SubmissionSuccess.css"
 import { useNavigate } from 'react-router-dom'
 
@@ -10,6 +10,18 @@ const SubmissionSuccess = () => {
             behavior: "smooth"
         });
     };
+
+
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
+
+        if (!token) {
+            Navigate("/workers-login")
+        } else {
+            Navigate("/worker-profile/submission-success")
+        }
+    }, [])
+
     return (
         <div className="success-container">
             <div className="success-icon">✔</div>
