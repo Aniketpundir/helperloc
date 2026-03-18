@@ -17,7 +17,7 @@ const Footer = () => {
             <div className='footer-section'>
                 <div className='footer-container'>
                     <div className='footer-left'>
-                        <h1>E - Labour</h1>
+                        <h1>HelperLoc</h1>
                         <p>Connecting skilled workers with those who need them.</p>
                     </div>
                     <div className='footer-middle1'>
