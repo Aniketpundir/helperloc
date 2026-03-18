@@ -75,15 +75,15 @@ const Contact = () => {
                         <form onSubmit={handleSubmit}>
                             <div className='form-group'>
                                 <label className='form-label'>Your Name</label>
-                                <input type='text' value={data.name} name='name' onChange={handleChange} placeholder='John Doe' required />
+                                <input type='text' value={data.name} name='name' onChange={handleChange} placeholder='Arjun' required />
                             </div>
                             <div className='form-group'>
                                 <label className='form-label'>Email Address</label>
-                                <input type='email' value={data.email} name='email' onChange={handleChange} placeholder='john@example.com' required />
+                                <input type='email' value={data.email} name='email' onChange={handleChange} placeholder='arjun@example.com' required />
                             </div>
                             <div className='form-group'>
                                 <label className='form-label'>Mobile Number</label>
-                                <input type='text' value={data.mobile} name='mobile' onChange={handleChange} placeholder='+91 98765 43210' required />
+                                <input type='text' value={data.mobile} name='mobile' onChange={handleChange} placeholder='+91 1234567890' required />
                             </div>
                             <div className='form-group'>
                                 <label className='form-label'>Message</label>
