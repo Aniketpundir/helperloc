@@ -57,11 +57,11 @@ const router = createBrowserRouter(
                 <Route path='/workers-signup' element={<WorkersSignup />} />
                 <Route path='/workers-login' element={<WorkersLogin />} />
                 <Route path='/' element={<Home />} />
-                <Route path='/howItWorks' element={<HowItWorks />} />
+                <Route path='/how-it-works' element={<HowItWorks />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
-                <Route path='/Service-Categories' element={<ServiceCategories />} />
-                <Route path='/Service-Categories/Listed-Workers/:title' element={<ListedWorkers />} />
+                <Route path='/service-categories' element={<ServiceCategories />} />
+                <Route path='/service-categories/listed-workers/:title' element={<ListedWorkers />} />
                 <Route path='/Service-Categories/Listed-Workers/:title/Worker-Details/:id' element={<StoreProvider>
                     <WorkersDetails />
                 </StoreProvider>} />

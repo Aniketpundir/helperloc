@@ -40,7 +40,7 @@ const Navbar = () => {
         const path = location.pathname;
 
         if (path === "/") setActiveItem("Home");
-        else if (path === "/howItWorks") setActiveItem("How it works");
+        else if (path === "/how-it-works") setActiveItem("How it works");
         else if (path === "/about") setActiveItem("About");
         else if (path === "/contact") setActiveItem("Contact");
         else if (path === "/worker-profile") setActiveItem("Profile");
@@ -106,7 +106,7 @@ const Navbar = () => {
                             </li>
                         </Link>
 
-                        <Link to="/howItWorks">
+                        <Link to="/how-it-works">
                             <li onClick={() => handleClick("How it works")}>
                                 How it works
                             </li>
@@ -178,7 +178,7 @@ const Navbar = () => {
                             </li>
                         </Link>
 
-                        <Link to="/howItWorks">
+                        <Link to="/how-it-works">
                             <li className={`button ${activeItem === "How it works" ? "clicked" : ""}`} onClick={() => handleClick("How it works")}>
                                 How it works
                             </li>

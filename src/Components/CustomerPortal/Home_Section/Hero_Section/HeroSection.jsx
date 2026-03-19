@@ -9,10 +9,10 @@ const HeroSection = () => {
         <section className="hero-section">
             <div className="hero-left">
                 <h1 className="hero-heading">
-                    Get Things Done, <br />Effortlessly
+                    Book Trusted Home Services Near You <br /> Electrician, Plumber, Cleaning & More
                 </h1>
                 <p className="hero-subtext">
-                    Book reliable local professionals for cleaning, repairs, moving, delivery, and other daily tasks — trusted, affordable, and hassle-free.
+                    Book trusted home services like cleaning, electrician, plumbing, moving, and delivery near you. Affordable, verified, and hassle-free.
                 </p>
 
                 <div className="hero-form">

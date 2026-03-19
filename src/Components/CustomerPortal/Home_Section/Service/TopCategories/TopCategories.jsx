@@ -63,7 +63,7 @@ const TopCategories = () => {
                         )
                     })}
                 </div>
-                <button onClick={() => { Navigate('/Service-Categories'), handleClick() }} className='more-service'>More Service...</button>
+                <button onClick={() => { Navigate('/service-categories'), handleClick() }} className='more-service'>More Service...</button>
             </div>
         </>
     )
