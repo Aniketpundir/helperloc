@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CustomerProfile.css";
-import profileImg from "../../../../assets/101.jpg";
+// import profileImg from "../../../../assets/101.jpg";
 
 import AddressSection from "../../Booking_Flow/BookingComponents/AddressSection/AddressSection";
 
@@ -109,7 +109,7 @@ const CustomerProfile = () => {
                 <div className="customer-profile-content">
                     <div className="customer-image-section">
                         <div className="customer-image-name">
-                            <img src={user?.avatar?.image || profileImg} alt="Customer" />
+                            <img src={user?.avatar?.image} alt="Customer" />
                             <h3>{user?.name}</h3>
                             <p>{user?.email}</p>
                             <p>{user?.phone}</p>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import image from "../../../assets/101.jpg";
+// import image from "../../../assets/101.jpg";
 import "./AddWorkersDetails.css";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -157,7 +157,7 @@ const AddWorkersDetails = () => {
 
                         <div className="worker-profile-photo">
                             <label>Profile Photo *</label>
-                            <img src={Data.profilePhoto || image} alt="Profile" />
+                            <img src={Data.profilePhoto} alt="Profile" />
                         </div>
 
                         <div className="form-group">

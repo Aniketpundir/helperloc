@@ -1,7 +1,7 @@
 import React from 'react'
 import "./WorkerReview.css";
-import image from "../../../../../assets/image.jpeg"
-import image1 from "../../../../../assets/101.jpg"
+// import image from "../../../../../assets/image.jpeg"
+// import image1 from "../../../../../assets/101.jpg"
 
 const ratingData = {
     average: 4.7,
@@ -24,7 +24,7 @@ const customers_reviews = [
     {
         id: 1,
         name: "Sophia Bennett",
-        avatar: image,
+        // avatar: image,
         timeAgo: "1 month ago",
         comment:
             "Ethan did an excellent job fixing a leaky pipe in my bathroom. He was professional, efficient, and the price was reasonable. Highly recommend!",
@@ -32,7 +32,7 @@ const customers_reviews = [
     {
         id: 2,
         name: "Liam Harper",
-        avatar: image1,
+        // avatar: image1,
         timeAgo: "2 months ago",
         comment:
             "Ethan was punctual and knowledgeable. He quickly identified the issue with my kitchen sink and fixed it. However, the cleanup could have been better.",
@@ -40,7 +40,7 @@ const customers_reviews = [
     {
         id: 3,
         name: "Liam Harper",
-        avatar: image1,
+        // avatar: image1,
         timeAgo: "2 months ago",
         comment:
             "Ethan was punctual and knowledgeable. He quickly identified the issue with my kitchen sink and fixed it. However, the cleanup could have been better.",
@@ -48,7 +48,7 @@ const customers_reviews = [
     {
         id: 4,
         name: "Liam Harper",
-        avatar: image1,
+        // avatar: image1,
         timeAgo: "2 months ago",
         comment:
             "Ethan was punctual and knowledgeable. He quickly identified the issue with my kitchen sink and fixed it. However, the cleanup could have been better.",
@@ -56,7 +56,7 @@ const customers_reviews = [
     {
         id: 5,
         name: "Liam Harper",
-        avatar: image1,
+        // avatar: image1,
         timeAgo: "2 months ago",
         comment:
             "Ethan was punctual and knowledgeable. He quickly identified the issue with my kitchen sink and fixed it. However, the cleanup could have been better.",
@@ -105,7 +105,7 @@ const WorkerReview = () => {
                 {customers_reviews.map((r) => (
                     <div key={r.id} className="review">
                         <div className="review-header">
-                            <img src={r.avatar} alt={r.name} className="review-avatar" />
+                            <img src="" alt={r.name} className="review-avatar" />
                             <div>
                                 <h4>{r.name}</h4>
                                 <p className="review-time">{r.timeAgo}</p>

@@ -9,9 +9,13 @@ import { store } from "./redux/store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { HelmetProvider } from 'react-helmet-async';
+
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <App />
-    <ToastContainer position="top-right" autoClose={3000} />
-  </Provider>
+  <HelmetProvider>
+    <Provider store={store}>
+      <App />
+      <ToastContainer position="top-right" autoClose={3000} />
+    </Provider>
+  </HelmetProvider>
 )

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "./PastBooking.css";
-import image from "../../../../assets/101.jpg";
+// import image from "../../../../assets/101.jpg";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 
@@ -52,7 +52,7 @@ const PastBooking = () => {
                         pastBookingWorkerList.map((items, index) => (
                             <div data-aos="fade-up" key={index} className='past-booking-details'>
                                 <img
-                                    src={items?.workerId?.avatar?.image || image}
+                                    src={items?.workerId?.avatar?.image}
                                     alt='Worker Image'
                                 />
                                 <div className='booking-service'>

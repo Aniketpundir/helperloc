@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import "./ServiceCategories.css"
 import Carpenter from "../../../assets/Carpenter.jpeg"
 import Electrician from "../../../assets/Electrician.jpeg"
@@ -73,7 +74,7 @@ const Servce_List = [
         id: "10",
         img: painting_service,
         title: "Painting Service",
-        description: "“Reliable painters bringing vibrant life to your space."
+        description: "Reliable painters bringing vibrant life to your space."
     },
     {
         id: "11",
@@ -84,23 +85,31 @@ const Servce_List = [
     {
         id: "12",
         img: Handyman,
-        title: "Painting Service",
+        title: "Handyman",
         description: "All rounder home repair services."
     },
 ]
 
-
 const ServiceCategories = () => {
-
     return (
         <>
+            <Helmet>
+                <title>Home Services India – Plumber, Electrician, Maid, Carpenter | HelperLoc</title>
+                <meta name="description" content="HelperLoc par sabhi ghar ke kaam ke liye trained helpers book karo — Plumber, Electrician, Painter, Carpenter, Home Cleaning, Gardening, Pest Control aur bahut kuch. Pure India mein available." />
+                <meta name="keywords" content="plumber india, electrician near me, carpenter booking, home cleaning service, pest control india, gardening service, appliance repair, handyman india, chowk labour, helperloc services" />
+                <link rel="canonical" href="https://helperloc.com/service-categories" />
+                <meta property="og:title" content="Home Services India – Plumber, Electrician, Maid, Carpenter | HelperLoc" />
+                <meta property="og:description" content="Sabhi ghar ke kaam ke liye trusted helpers book karo — Pure India mein available." />
+                <meta property="og:url" content="https://helperloc.com/service-categories" />
+                <meta property="og:type" content="website" />
+            </Helmet>
+
             <div className='service-categories'>
                 <div data-aos="fade-down" className='service-categories-hero-image-text'>
                     <h1>Find Trusted Services Effortlessly.</h1>
                     <p>Your one-stop solution for reliable household help. Get it done right.</p>
                 </div>
                 <div className='service-categories-container'>
-
                     <div className='service-categories-list'>
                         {Servce_List.map((items, index) => {
                             return (
@@ -113,7 +122,6 @@ const ServiceCategories = () => {
                                 </div>
                             )
                         })}
-
                     </div>
                 </div>
             </div>
