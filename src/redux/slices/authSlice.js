@@ -37,6 +37,7 @@ export const loginWorker = createAsyncThunk(
     async (data, { dispatch, rejectWithValue }) => {
         try {
             const res = await axios.post(`${URL}api/users/login`, data);
+            console.log(res)
 
             if (!res.data.success) {
                 return rejectWithValue(res.data.message);
