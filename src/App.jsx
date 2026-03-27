@@ -83,7 +83,6 @@ const router = createBrowserRouter(
                 <Route path='/worker-profile/add-workers-details' element={<AddWorkersDetails />} />
                 <Route path='/worker-profile/submission-success' element={<SubmissionSuccess />} />
             </Route>
-
         </Route>
     )
 )

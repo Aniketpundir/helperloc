@@ -1,7 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const URL = "https://e-labour-backend.onrender.com/";
+// const URL = "https://e-labour-backend.onrender.com/";
+
+const URL = "http://localhost:5000/"
 
 /* ======================================================
    LOGIN CUSTOMER

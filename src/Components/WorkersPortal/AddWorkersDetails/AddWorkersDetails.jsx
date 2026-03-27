@@ -37,14 +37,14 @@ const AddWorkersDetails = () => {
         zipCode: "",
 
         workCategory: "",
-        skills: [],
-        skillInput: "",
+        // skills: [],
+        // skillInput: "",
         experience: "",
 
-        workingHr: "",
-        weekends: false,
-        rate: "",
-        hrRate: "",
+        // workingHr: "",
+        // weekends: false,
+        // rate: "",
+        // hrRate: "",
 
         emergencyContact: "",
         reference: "",
@@ -131,15 +131,15 @@ const AddWorkersDetails = () => {
         }
     };
 
-    useEffect(() => {
-        const token = localStorage.getItem("workerToken")
+    // useEffect(() => {
+    //     const token = localStorage.getItem("workerToken")
 
-        if (!token) {
-            navigate("/workers-login")
-        } else {
-            navigate("//worker-profile/add-workers-details")
-        }
-    }, [])
+    //     if (!token) {
+    //         navigate("/workers-login")
+    //     } else {
+    //         navigate("//worker-profile/add-workers-details")
+    //     }
+    // }, [])
 
     return (
         <div className="profile-container">
@@ -253,7 +253,7 @@ const AddWorkersDetails = () => {
                             </select>
                         </div>
 
-                        <div className="form-group selected-skills">
+                        {/* <div className="form-group selected-skills">
                             <label>Skills *</label>
 
                             <div className="skills-list">
@@ -273,7 +273,7 @@ const AddWorkersDetails = () => {
                             <button type="button" className="add-skill-btn" onClick={handleAddSkill}>
                                 Add Skill
                             </button>
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
                             <label>Experience *</label>
@@ -284,7 +284,7 @@ const AddWorkersDetails = () => {
 
                 </section>
 
-                <section className="profile-section">
+                {/* <section className="profile-section">
 
                     <h3>4. Availability & Work Preference</h3>
 
@@ -312,7 +312,7 @@ const AddWorkersDetails = () => {
 
                     </div>
 
-                </section>
+                </section> */}
 
                 <section className="profile-section">
 

@@ -49,8 +49,8 @@ const WorkersLogin = () => {
         const res = await dispatch(loginWorker(data));
 
         if (res.meta.requestStatus === "fulfilled") {
-            Navigate("/worker-profile");
-            window.location.reload();
+            // Navigate("/worker-profile");
+            // window.location.reload();
         }
     };
 
