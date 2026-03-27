@@ -85,27 +85,27 @@ const AddWorkersDetails = () => {
         }
     };
 
-    const workerSkill = [
-        "Plumbing", "Electrical", "Painting", "Carpentry",
-        "Masonry", "Welding", "Mechanic", "Gardening"
-    ];
+    // const workerSkill = [
+    //     "Plumbing", "Electrical", "Painting", "Carpentry",
+    //     "Masonry", "Welding", "Mechanic", "Gardening"
+    // ];
 
-    const handleAddSkill = () => {
-        if (Data.skillInput && !Data.skills.includes(Data.skillInput)) {
-            setData((prev) => ({
-                ...prev,
-                skills: [...prev.skills, Data.skillInput],
-                skillInput: "",
-            }));
-        }
-    };
+    // const handleAddSkill = () => {
+    //     if (Data.skillInput && !Data.skills.includes(Data.skillInput)) {
+    //         setData((prev) => ({
+    //             ...prev,
+    //             skills: [...prev.skills, Data.skillInput],
+    //             skillInput: "",
+    //         }));
+    //     }
+    // };
 
-    const removeSkill = (skill) => {
-        setData((prev) => ({
-            ...prev,
-            skills: prev.skills.filter((s) => s !== skill),
-        }));
-    };
+    // const removeSkill = (skill) => {
+    //     setData((prev) => ({
+    //         ...prev,
+    //         skills: prev.skills.filter((s) => s !== skill),
+    //     }));
+    // };
 
     const handleSubmit = async (e) => {
 
@@ -131,15 +131,15 @@ const AddWorkersDetails = () => {
         }
     };
 
-    // useEffect(() => {
-    //     const token = localStorage.getItem("workerToken")
+    useEffect(() => {
+        const token = localStorage.getItem("workerToken")
 
-    //     if (!token) {
-    //         navigate("/workers-login")
-    //     } else {
-    //         navigate("//worker-profile/add-workers-details")
-    //     }
-    // }, [])
+        if (!token) {
+            navigate("/workers-login")
+        } else {
+            navigate("//worker-profile/add-workers-details")
+        }
+    }, [])
 
     return (
         <div className="profile-container">
